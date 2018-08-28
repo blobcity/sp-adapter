@@ -35,4 +35,8 @@ public class ExcelExport {
         return this.excelWorkbook;
     }
 
+    public String getFilename() {
+        return this.filename;
+    }
+
 }
