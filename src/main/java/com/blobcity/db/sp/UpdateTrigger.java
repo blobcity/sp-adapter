@@ -1,5 +1,6 @@
 package com.blobcity.db.sp;
 
+import com.blobcity.db.sp.triggers.TriggerOutcome;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -17,10 +18,11 @@ public interface UpdateTrigger {
      * @param collection name of collection
      * @param oldValues old values of records before update
      * @param newValues new values of records that will be set after update
-     * @return {@code true} if the transaction is to proceed further; {@code false} if the transaction is to be cancelled
-     * / rolled-back.
+     * @return {@link TriggerOutcome} with outcome of <code>true</code> if operation must proceed further, else with
+     * outcome of <code>false</code>. An optional error message can be specified, which is returned to the invoking
+     * user only in the event of a <code>false</code> outcome.
      */
-    public boolean preUpdate(final String ds, final String collection, final List<JSONObject> oldValues, final List<JSONObject> newValues);
+    public TriggerOutcome preUpdate(final String ds, final String collection, final List<JSONObject> oldValues, final List<JSONObject> newValues);
 
     /**
      * Called after an update operation is performed. Success or failure in execution of this function does not affect

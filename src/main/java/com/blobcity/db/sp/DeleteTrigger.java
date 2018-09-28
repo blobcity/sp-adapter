@@ -1,5 +1,6 @@
 package com.blobcity.db.sp;
 
+import com.blobcity.db.sp.triggers.TriggerOutcome;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -16,9 +17,11 @@ public interface DeleteTrigger {
      * @param ds name of datastore
      * @param collection name of collection
      * @param jsons list of records that will be deleted post operation completion
-     * @return {@code true} if transaction should proceed further and {@code false} to roll-back the transaction
+     * @return {@link TriggerOutcome} with outcome of <code>true</code> if operation must proceed further, else with
+     * outcome of <code>false</code>. An optional error message can be specified, which is returned to the invoking
+     * user only in the event of a <code>false</code> outcome.
      */
-    public boolean preDelete(final String ds, final String collection, final List<JSONObject> jsons);
+    public TriggerOutcome preDelete(final String ds, final String collection, final List<JSONObject> jsons);
 
     /**
      * Called after a delete operation is performed. The success or failure in execution of this function does not

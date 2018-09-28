@@ -1,6 +1,7 @@
 package com.blobcity.db.sp;
 
 import com.blobcity.db.sp.adapter.StoredProcedureException;
+import com.blobcity.db.sp.triggers.TriggerOutcome;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -17,10 +18,11 @@ public interface InsertTrigger {
      * @param ds name of datastore
      * @param collection name of collection
      * @param jsons the records being inserted
-     * @return {@code true} if the transaction should proceed further, and {@code false} if the transaction is to be
-     * rolled-back.
+     * @return {@link TriggerOutcome} with outcome of <code>true</code> if operation must proceed further, else with
+     * outcome of <code>false</code>. An optional error message can be specified, which is returned to the invoking
+     * user only in the event of a <code>false</code> outcome.
      */
-    public boolean preInsert(final String ds, final String collection, final List<JSONObject> jsons);
+    public TriggerOutcome preInsert(final String ds, final String collection, final List<JSONObject> jsons);
 
     /**
      * Invoked post insert with the list of objects that were just inserted. Success or failure in execution of this

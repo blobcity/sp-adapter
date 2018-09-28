@@ -9,7 +9,8 @@ import java.lang.annotation.Target;
  * @author sanketsarang
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE) //can use in method only.
-public @interface Rest {
-    String path();
+@Target(ElementType.TYPE)
+public @interface Trigger {
+    String table();
+    int sequence() default -1;
 }
