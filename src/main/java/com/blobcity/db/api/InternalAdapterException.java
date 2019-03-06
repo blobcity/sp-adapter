@@ -1,7 +1,7 @@
 /*
  * Copyright 2014 - 2015, BlobCity iSolutions Pvt. Ltd.
  */
-package db.api;
+package com.blobcity.db.api;
 
 /**
  * Exception to throw if something internally happened in the server-side adapter

@@ -1,7 +1,7 @@
 /*
  * Copyright 2015, BlobCity iSolutions Private Limited
  */
-package db.api;
+package com.blobcity.db.api;
 
 import org.json.JSONObject;
 

@@ -1,7 +1,7 @@
 /*
  * Copyright 2014, BlobCity iSolutions Pvt. Ltd.
  */
-package db.annotations;
+package com.blobcity.db.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,7 +1,7 @@
 /*
  * Copyright 2014, BlobCity iSolutions Pvt. Ltd.
  */
-package db.functions;
+package com.blobcity.db.functions;
 
 import org.json.JSONObject;
 

@@ -1,7 +1,7 @@
 /*
  * Copyright 2014, BlobCity iSolutions Pvt. Ltd.
  */
-package db.functions;
+package com.blobcity.db.functions;
 
 /**
  * Throw if an error is to be reported from the trigger. This will rollback the DML operation that invoked the trigger

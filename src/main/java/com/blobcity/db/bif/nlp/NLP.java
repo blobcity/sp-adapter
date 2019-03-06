@@ -1,4 +1,4 @@
-package db.bif.nlp;
+package com.blobcity.db.bif.nlp;
 
 import java.util.List;
 
