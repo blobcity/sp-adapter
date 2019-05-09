@@ -6,7 +6,7 @@
 
     <groupId>com.blobcity.db</groupId>
     <artifactId>sp-adapter</artifactId>
-    <version>1.5</version>
+    <version>1.6-SNAPSHOT</version>
 
     <dependencies>
 
