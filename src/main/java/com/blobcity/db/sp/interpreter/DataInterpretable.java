@@ -27,11 +27,4 @@ public interface DataInterpretable {
      * @param filePath path to file related to this event
      */
     public void onEvent(final InterpreterEventType eventType, final String filePath);
-
-//    /**
-//     * Invoked if the  data to the interpreter is being fed by a file watch service. This can be used to track the
-//     * import of a file and match the interpreted contents to the file being referenced here.
-//     * @param filename name of file
-//     */
-//    public void setFromFile(final String filename);
 }
